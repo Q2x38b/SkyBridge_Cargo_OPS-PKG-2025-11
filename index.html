@@ -12,9 +12,25 @@
       align-items: center;
       justify-content: center;
       background: #0a0a0a;
+      font-family: sans-serif;
     }
     .buttons { display: flex; gap: 16px; }
-    a {
+    .hint {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 600px;
+      padding: 20px 24px;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .hint strong { color: #fff; }
+    .btn {
       padding: 12px 32px;
       background: #fff;
       color: #0a0a0a;
@@ -22,14 +38,21 @@
       font-family: system-ui, sans-serif;
       font-weight: 500;
       border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
     }
-    a:hover { background: #e0e0e0; }
+    .btn:hover { background: #e0e0e0; }
   </style>
 </head>
 <body>
   <div class="buttons">
-    <a href="SkyBridge_Cargo_OPS-PKG-2025-11.zip" download>Download</a>
-    <a href="pass.html">Retrieve Pass</a>
+    <a class="btn" href="SkyBridge_Cargo_OPS-PKG-2025-11.zip" download>Download</a>
   </div>
+
+  <div class="hint">
+    <p>The flight log has more to offer than just routes and times — pay close attention to the <strong>Remarks</strong> column. The first characters of each entry aren't as random as they seem. Once you spot the pattern, remember that the alphabet can be shifted, and in this case, you'll want to step backwards by a small number to reveal the real message.</p>
+  </div>
+
 </body>
 </html>
